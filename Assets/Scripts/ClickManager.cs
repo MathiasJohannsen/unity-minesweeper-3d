@@ -18,8 +18,7 @@ public class ClickManager : MonoBehaviour
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit targetedBlock, hitDistance, blockMask))
             {
                 Destroy(targetedBlock.transform.gameObject);
-                //don't use raycast, ask if there is a trap at the same position
-                if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, hitDistance, trapMask))
+                if (Physics.CheckSphere(targetedBlock.transform.position, 0.01f, trapMask))
                 {
                     //its a Trap
                     Debug.Log("TRAP!!!");
