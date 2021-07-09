@@ -4,7 +4,6 @@ using UnityEngine.Tilemaps;
 public class NumberGenerator : MonoBehaviour
 {
     public Tilemap trapsTilemap;
-    public TileBase trapTile;
     public Tilemap numberTilemap;
     public Tile[] numberTiles;
     public int startX = 0;

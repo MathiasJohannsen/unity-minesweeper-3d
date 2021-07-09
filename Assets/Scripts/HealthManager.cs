@@ -18,6 +18,7 @@ public class HealthManager : MonoBehaviour
 
     void Die()
     {
+        gameObject.GetComponent<UIManager>().UpdateText();
         gameObject.GetComponent<UIManager>().ShowDeathScreen();
     }
 }
